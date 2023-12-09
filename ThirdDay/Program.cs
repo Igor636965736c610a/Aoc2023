@@ -1,106 +1,96 @@
 ﻿const string rootPath = @"C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay";
+var file = new StreamReader($"{rootPath}/input.txt");
+Console.WriteLine(Solve(file));
 
-var sum = 0;
-using (var reader = new StreamReader($"{rootPath}/input.txt"))
+int Solve(StreamReader file)
 {
-    var lines = new string?[3]
-    {
-        null,
-        null,
-        null
-    };
-    string? currentLine;
-    do
-    {
-        currentLine = reader.ReadLine();
-        lines[0] = lines[1];
-        lines[1] = lines[2];
-        lines[2] = currentLine;
+    var context = new Context(null, null, null);
+    var sum = 0;
 
-        sum = EnumerateLine(lines, sum);
-    } while (currentLine is not null);
-}
-
-Console.WriteLine(sum);
-
-int EnumerateLine(string?[] area, int sum)
-{
-    if (area[1] is null)
+    while (file.ReadLine() is {} line)
     {
-        return sum;
+        context = new Context(context.CurrentLine, context.NextLine, line);
+        sum += HandleContext(context);
     }
-    var i = 0;
-    var currentLine = area[1]!.GetEnumerator();
-    while (currentLine.MoveNext())
-    {
-        if (char.IsDigit(currentLine.Current))
-        {
-            var digitBuffer = GetDigitBuffer(ref i, currentLine);
-            if (CheckNumberArea(digitBuffer, area))
-            {
-                sum += digitBuffer.Number;
-            }
-        }
-        i++;
-    }
+
+    context = new Context(context.CurrentLine, context.NextLine, null);
+    sum += HandleContext(context);
+
     return sum;
 }
 
-DigitBuffer GetDigitBuffer(ref int startMainIndex, CharEnumerator currentLine)
+(int result, int startIndex, int endIndex)? ReadNumber(ReadOnlySpan<char> text, int startAt)
 {
-    var startIndexLocal = startMainIndex;
-    var endIndex = startMainIndex;
-    var number = (currentLine.Current - '0').ToString();
-    while (currentLine.MoveNext() && char.IsDigit(currentLine.Current))
+    var index = startAt;
+
+    while (text.Length > index && !char.IsDigit(text[index]))
+    {
+        index++;
+    }
+
+    if (text.Length <= index)
+    {
+        return null;
+    }
+
+    var endIndex = index;
+
+    while (text.Length > endIndex && char.IsDigit(text[endIndex]))
     {
         endIndex++;
-        startMainIndex++;
-        number += currentLine.Current - '0';
     }
-    var digitBuffer = new DigitBuffer(int.Parse(number), startIndexLocal, endIndex);
-    startMainIndex++;
-    return digitBuffer;
+
+    return (int.Parse(text[index..endIndex]), index, endIndex);
 }
 
-bool CheckNumberArea(DigitBuffer digitBuffer, string?[] area)
+int HandleContext(Context context)
 {
-    bool leftShift = digitBuffer.Start - 1 >= 0;
-    bool rightShift = digitBuffer.End + 1  < area[1]!.Length;
-    if (rightShift)
+    if (context.CurrentLine is null)
     {
-        var point = area[1]![digitBuffer.End + 1];
-        if (Check(point))
-            return true;
+        return 0;
     }
-    if (leftShift)
+
+    var line = context.CurrentLine.AsSpan();
+    var sum = 0;
+    var startAt = 0;
+
+    while (ReadNumber(line, startAt) is {} read)
     {
-        var point = area[1]![digitBuffer.Start - 1];
-        if (Check(point))
-            return true;
-    }
-    var start = leftShift ? digitBuffer.Start - 1 : digitBuffer.Start;
-    var end = rightShift ? digitBuffer.End + 1 : digitBuffer.End;
-    if (area[0] is not null)
-    {
-        for (var i = start; i <= end; i++)
+        startAt = read.endIndex;
+        var start = Math.Max(0, read.startIndex - 1);
+        var end = Math.Min(context.CurrentLine.Length - 1, read.endIndex);
+
+        if (
+            SearchLine(context.PreviousLine, start, end) ||
+            SearchLine(context.CurrentLine, start, end) ||
+            SearchLine(context.NextLine, start, end)
+        )
         {
-            if (Check(area[0]![i]))
-                return true;
+            sum += read.result;
         }
     }
-    if (area[2] is not null)
+
+    return sum;
+}
+
+bool SearchLine(string? line, int start, int end)
+{
+    if (line is not {} l)
     {
-        for (var i = start; i <= end; i++)
+        return false;
+    }
+
+    for (int i = start; i < end + 1; i++)
+    {
+        var c = l[i];
+
+        if (c != '.' && !char.IsDigit(c))
         {
-            if (Check(area[2]![i]))
-                return true;
+            return true;
         }
     }
+
     return false;
 }
-bool Check(char point)
-{
-    return !char.IsDigit(point) && point != '.';
-}
 
-record DigitBuffer(int Number, int Start, int End);
+record struct Context(string? PreviousLine, string? CurrentLine, string? NextLine);

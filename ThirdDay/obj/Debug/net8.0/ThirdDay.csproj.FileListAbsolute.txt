@@ -12,3 +12,4 @@ C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\refint\ThirdDay.dl
 C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.pdb
 C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.genruntimeconfig.cache
 C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ref\ThirdDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.sourcelink.json
