@@ -1,0 +1,14 @@
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\bin\Debug\net8.0\ThirdDay.exe
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\bin\Debug\net8.0\ThirdDay.deps.json
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\bin\Debug\net8.0\ThirdDay.runtimeconfig.json
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\bin\Debug\net8.0\ThirdDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\bin\Debug\net8.0\ThirdDay.pdb
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.AssemblyInfoInputs.cache
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.AssemblyInfo.cs
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.csproj.CoreCompileInputs.cache
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\refint\ThirdDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.pdb
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ThirdDay.genruntimeconfig.cache
+C:\Users\Igor\RiderProjects\Aoc2023\ThirdDay\obj\Debug\net8.0\ref\ThirdDay.dll
