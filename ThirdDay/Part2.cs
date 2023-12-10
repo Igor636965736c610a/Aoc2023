@@ -79,7 +79,7 @@ public class Part2
             endIndex++;
         }
     
-        return new NumberDef(int.Parse(text[index..endIndex]), Math.Max(0, index - 1), endIndex);
+        return new NumberDef(int.Parse(text[index..endIndex]), index, endIndex);
     }
     NumberDef[] GetNumsFromLine(string line)
     {
@@ -90,8 +90,8 @@ public class Part2
         while (ReadNumber(lineSpan, startAt) is {} read)
         {
             startAt = read.EndIndex;
-            var end = Math.Min(line.Length - 1, read.EndIndex);
-            var readNumber = new NumberDef(read.Result, read.StartIndex, end);
+            var end = read.EndIndex - 1;
+            var readNumber = read with { EndIndex = end };
             nums.Add(readNumber);
         }
     
@@ -118,8 +118,8 @@ public class Part2
             .Concat(GetNumbersFromLine(context.CurrentLineNumbers))
             .Where(x =>
             {
-                var start =x.StartIndex + 1;
-                var end = x.EndIndex - 1;
+                var start = x.StartIndex;
+                var end = x.EndIndex;
                 return (start >= starPosition - 1 && start <= starPosition + 1) ||
                        (end >= starPosition - 1 && end <= starPosition + 1);
             })
