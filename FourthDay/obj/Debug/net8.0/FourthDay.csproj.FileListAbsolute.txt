@@ -1,0 +1,15 @@
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\bin\Debug\net8.0\FourthDay.exe
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\bin\Debug\net8.0\FourthDay.deps.json
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\bin\Debug\net8.0\FourthDay.runtimeconfig.json
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\bin\Debug\net8.0\FourthDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\bin\Debug\net8.0\FourthDay.pdb
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.AssemblyInfoInputs.cache
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.AssemblyInfo.cs
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.csproj.CoreCompileInputs.cache
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.sourcelink.json
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\refint\FourthDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.pdb
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\FourthDay.genruntimeconfig.cache
+C:\Users\Igor\RiderProjects\Aoc2023\FourthDay\obj\Debug\net8.0\ref\FourthDay.dll
