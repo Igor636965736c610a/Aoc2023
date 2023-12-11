@@ -26,12 +26,13 @@ public class Part2
             
             var right = numbers[1].Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x));
             var count = left.Intersect(right).Count();
+            var cardsLine = copies.Select(x => x.Count).Sum() + 1;
             
-            sum += 1 + copies.Select(x => x.Count).Sum();
+            sum += cardsLine;
             
             if (count != 0)
             {
-                copies.Add(new Node(count, copies.Select(x => x.Count).Sum() + 1));
+                copies.Add(new Node(count, cardsLine));
             }
             copies.RemoveAll(x => x.Value == 0);
         }
