@@ -1,0 +1,15 @@
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\bin\Debug\net8.0\FiveDay.exe
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\bin\Debug\net8.0\FiveDay.deps.json
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\bin\Debug\net8.0\FiveDay.runtimeconfig.json
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\bin\Debug\net8.0\FiveDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\bin\Debug\net8.0\FiveDay.pdb
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.AssemblyInfoInputs.cache
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.AssemblyInfo.cs
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.csproj.CoreCompileInputs.cache
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.sourcelink.json
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\refint\FiveDay.dll
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.pdb
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\FiveDay.genruntimeconfig.cache
+C:\Users\Igor\RiderProjects\Aoc2023\FiveDay\obj\Debug\net8.0\ref\FiveDay.dll
